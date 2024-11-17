@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Metadata and CSS connection -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gallery - Jo Bo Ah</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation bar -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="homepage.html">Jo Bo Ah</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="homepage.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="news.html">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="dramas.html">Dramas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="finance.html">Finance</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- Main content -->
+    <main>
+        <section id="gallery" class="container mt-5 gallery">
+            <h2 class="mb-4">Gallery</h2>
+            <div class="row">
+                <!-- Gallery images -->
+                <div class="col-md-3">
+                    <img src="images/300x (1).webp" alt="Jo Bo Ah" class="img-fluid" data-toggle="modal" data-target="#imageModal">
+                </div>
+                <div class="col-md-3">
+                    <img src="images/300x (2).webp" alt="Jo Bo Ah" class="img-fluid" data-toggle="modal" data-target="#imageModal">
+                </div>
+                <div class="col-md-3">
+                    <img src="images/300x (3).webp" alt="Jo Bo Ah" class="img-fluid" data-toggle="modal" data-target="#imageModal">
+                </div>
+                <div class="col-md-3">
+                    <img src="images/300x (4).webp" alt="Jo Bo Ah" class="img-fluid" data-toggle="modal" data-target="#imageModal">
+                </div>
+                <div class="col-md-3">
+                    <img src="images/300x (5).webp" alt="Jo Bo Ah" class="img-fluid" data-toggle="modal" data-target="#imageModal">
+                </div>
+                <div class="col-md-3">
+                    <img src="images/300x (6).webp" alt="Jo Bo Ah" class="img-fluid" data-toggle="modal" data-target="#imageModal">
+                </div>
+                <div class="col-md-3">
+                    <img src="images/300x (7).webp" alt="Jo Bo Ah" class="img-fluid" data-toggle="modal" data-target="#imageModal">
+                </div>
+                <div class="col-md-3">
+                    <img src="images/300x (8).webp" alt="Jo Bo Ah" class="img-fluid" data-toggle="modal" data-target="#imageModal">
+                </div>
+                <div class="col-md-3">
+                    <img src="images/300x (9).webp" alt="Jo Bo Ah" class="img-fluid" data-toggle="modal" data-target="#imageModal">
+                </div>
+                <div class="col-md-3">
+                    <img src="images/300x (10).webp" alt="Jo Bo Ah" class="img-fluid" data-toggle="modal" data-target="#imageModal">
+                </div>
+                <div class="col-md-3">
+                    <img src="images/300x (11).webp" alt="Jo Bo Ah" class="img-fluid" data-toggle="modal" data-target="#imageModal">
+                </div>
+                <div class="col-md-3">
+                    <img src="images/300x (12).webp" alt="Jo Bo Ah" class="img-fluid" data-toggle="modal" data-target="#imageModal">
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Modal for enlarged image preview -->
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="imageModalLabel">Image Preview</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img src="" alt="Jo Bo Ah" class="img-fluid" id="modalImage">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>Created by Gainullova Arailym | © 2024</p>
+    </footer>
+    
+    <!-- JavaScript scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.querySelectorAll('.gallery img').forEach(img => {
+            img.addEventListener('click', function() {
+                const src = this.getAttribute('src'); 
+                document.getElementById('modalImage').setAttribute('src', src); 
+                $('#imageModal').modal('show');  
+            });
+        });
+    </script>
+</body>
+</html>

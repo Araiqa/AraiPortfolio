@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Data Visualization</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Navigation bar -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="homepage.html">Jo Bo Ah</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="homepage.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="news.html">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="dramas.html">Dramas</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="finance.html">Finance</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main content -->
+    <main class="container mt-5">
+        <h1 class="text-center mb-4">Financial Data Visualization</h1>
+        <canvas id="financeChart" width="400" height="200"></canvas>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-light text-center mt-5 py-3">
+        <p>Created by Gainullova Arailym | © 2024</p>
+    </footer>
+
+    <!-- JavaScript for Chart.js -->
+    <script>
+        async function loadFinanceData() {
+            try {
+                const response = await fetch('/api/finance');
+                const data = await response.json();
+
+                const labels = Object.keys(data).slice(0, 10); // Даты
+                const values = labels.map(date => parseFloat(data[date]['4. close'])); // Закрывающие цены
+
+                const ctx = document.getElementById('financeChart').getContext('2d');
+                new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels,
+                        datasets: [{
+                            label: 'Stock Prices (AAPL)',
+                            data: values,
+                            borderColor: 'rgba(75, 192, 192, 1)',
+                            borderWidth: 2,
+                            fill: false,
+                        }],
+                    },
+                    options: {
+                        responsive: true,
+                        plugins: {
+                            legend: {
+                                display: true,
+                                position: 'top',
+                            },
+                        },
+                        scales: {
+                            x: {
+                                title: {
+                                    display: true,
+                                    text: 'Dates',
+                                },
+                            },
+                            y: {
+                                title: {
+                                    display: true,
+                                    text: 'Prices',
+                                },
+                            },
+                        },
+                    },
+                });
+            } catch (error) {
+                console.error('Error loading finance data:', error);
+                alert('Failed to load finance data.');
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', loadFinanceData);
+    </script>
+</body>
+</html>

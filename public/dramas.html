@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dramas - Jo Bo Ah</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation bar -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="homepage.html">Jo Bo Ah</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="homepage.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="news.html">News</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="dramas.html">Dramas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="finance.html">Finance</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- Main content -->
+    <main class="container mt-5">
+        <section id="dramas">
+            <h2 class="mb-4">Dramas Featuring Jo Bo Ah</h2>
+            <!-- Container for displaying dramas -->
+            <div id="dramasContainer" class="row"></div>
+
+            <!-- Form for adding a new drama -->
+            <div class="mt-5">
+                <h2>Add New Drama</h2>
+                <form id="createDramaForm">
+                    <div class="form-group">
+                        <label for="title">Title</label>
+                        <input type="text" id="title" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <textarea id="description" class="form-control"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="image1">Image 1 URL</label>
+                        <input type="text" id="image1" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="image2">Image 2 URL</label>
+                        <input type="text" id="image2" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="image3">Image 3 URL</label>
+                        <input type="text" id="image3" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="releaseDate">Release Date</label>
+                        <input type="date" id="releaseDate" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="genres">Genres (comma separated)</label>
+                        <input type="text" id="genres" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="episodes">Episodes</label>
+                        <input type="number" id="episodes" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="duration">Duration</label>
+                        <input type="text" id="duration" class="form-control">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Add Drama</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="bg-light text-center mt-5 py-3">
+        <p>Created by Gainullova Arailym | © 2024</p>
+    </footer>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+</html>

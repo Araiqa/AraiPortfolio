@@ -1,0 +1,134 @@
+/* General styles for the entire document */
+body {
+    /* Sets the font family to Arial with a fallback to sans-serif */
+    font-family: 'Arial', sans-serif;
+    /* Sets the line height */
+    line-height: 1.6;
+    /* Sets a background image, centers it, and makes it fixed */
+    background: url('../images/photo1717911075.jpeg') no-repeat center center fixed;
+    /* Scales the background image to cover the entire screen */
+    background-size: cover;
+    /* Sets the text color */
+    color: #343a40;
+    /* Removes default margin and padding */
+    margin: 0;
+    padding: 0;
+    /* Sets the box-sizing property to include padding and border in the element's total width and height */
+    box-sizing: border-box;
+}
+
+/* Styles for the navigation bar */
+header .navbar {
+    /* Adds a bottom margin to the navbar */
+    margin-bottom: 20px;
+    /* Adds a shadow effect to the navbar */
+    box-shadow: 0 4px 8px rgba(147, 101, 101, 0.1);
+    /* Sets the background color of the navbar */
+    background-color: rgba(231, 232, 182, 0.9); 
+}
+
+/* Styles for the main content area */
+main {
+    /* Adds padding inside the main content area */
+    padding: 20px;
+    /* Sets a semi-transparent white background color */
+    background-color: rgba(223, 221, 221, 0.8);
+    /* Rounds the corners of the main content area */
+    border-radius: 10px;
+    /* Adds a shadow effect to the main content area */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles for the footer */
+footer {
+    /* Sets the background color of the footer */
+    background-color: #343a40;
+    /* Sets the text color of the footer */
+    color: #b0a367;
+    /* Adds padding inside the footer */
+    padding: 10px 0;
+    /* Aligns the text to the center */
+    text-align: center;
+}
+
+/* Styles for card elements */
+.card {
+    /* Adds a bottom margin to each card */
+    margin-bottom: 20px;
+    /* Removes the default border */
+    border: none;
+    /* Rounds the corners of the card */
+    border-radius: 10px;
+    /* Ensures that the card's content doesn't overflow */
+    overflow: hidden;
+    /* Adds a shadow effect to each card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles for the top image of the card */
+.card-img-top {
+    /* Adds a bottom border to separate the image from the card body */
+    border-bottom: 1px solid #ddd;
+}
+
+/* Ensures images inside containers are responsive */
+.container img {
+    /* Sets the maximum width of images to 100% of their container */
+    max-width: 100%;
+    /* Maintains the aspect ratio of images */
+    height: auto;
+}
+
+/* Styles for headings */
+h1, h2 {
+    /* Sets the color of the headings */
+    color: #704483;
+}
+
+/* Styles for lead paragraphs */
+.lead {
+    /* Sets the font size for lead paragraphs */
+    font-size: 1.25rem;
+    /* Sets the font weight for lead paragraphs */
+    font-weight: 300;
+}
+
+/* Styles for the brand name in the navbar */
+.navbar-brand {
+    /* Sets the font size for the brand name */
+    font-size: 1.5rem;
+    /* Sets the font weight for the brand name */
+    font-weight: bold;
+}
+
+/* Styles for links in the navbar */
+.nav-link {
+    /* Sets the font size for links in the navbar */
+    font-size: 1.1rem;
+}
+
+/* Styles for images in the gallery */
+.gallery img {
+    /* Adds a bottom margin to images in the gallery */
+    margin-bottom: 15px;
+    /* Changes the cursor to a pointer when hovering over images in the gallery */
+    cursor: pointer;
+}
+
+/* Styles for the modal image */
+#modalImage {
+    /* Sets the maximum width for the modal image */
+    max-width: 100%;
+    /* Centers the modal image */
+    margin: 0 auto;
+    /* Adds padding around the modal image */
+    padding: 10px;
+    /* Sets the background color for the modal image */
+    background-color: #a0cb85;
+    /* Adds a border to the modal image */
+    border: 5px solid #355a81;
+    /* Rounds the corners of the modal image */
+    border-radius: 5px;
+    /* Adds a shadow effect to the modal image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
